@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- RESET CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <!-- MY CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>{% block title %}{% endblock title %}</title>
+</head>
+<body>
+    <nav>
+        <div class="hamburger left"><p>ham left</p></div>
+        <div class="b_link left"><p>base link left</p></div>
+        <div class="social_m"><p>social media</p></div>
+        <div class="b_link right"><p>base links right</p></div>
+        <div class="hamburger right">ham right</div>
+    </nav>
+    <main>{% block main %}{% endblock main %}</main>
+    <!-- <footer>{% block footer %}{% endblock footer %}</footer> -->
+    <footer><p>Copyright &copy; <script>document.write(new Date().getFullYear());</script>, Sebastian Gmur</p></footer>
+</body>
+</html>
